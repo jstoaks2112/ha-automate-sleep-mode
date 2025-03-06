@@ -1,0 +1,12 @@
+[Unit]
+Description=MQTT Sleep Mode Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /etc/mqtt_sleep_mode.py
+Restart=always
+#User=your-username
+#Group=your-group
+
+[Install]
+WantedBy=multi-user.target
